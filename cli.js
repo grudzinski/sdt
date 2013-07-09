@@ -1,3 +1,6 @@
+#!/usr/local/bin/node
+
+var _ = require('underscore');
 var async = require('async');
 
 var getStatus = require('./lib/getStatus.js');
@@ -6,10 +9,11 @@ var stop = require('./lib/stop.js');
 var conf = require('./lib/conf.js');
 
 var args = process.argv;
+
 var commands = {
-	status: createCommandFunc(getStatus, onStatusGot),
-	start: createCommandFunc(start, onStartComplete),
-	stop: createCommandFunc(stop, onStopComplete)
+	status: _.partial(getStatus, conf, onStatusGot),
+	start: _.partial(start, conf, onStartComplete),
+	stop: _.partial(stop, conf, onStopComplete)
 };
 
 if (args.length > 2) {
@@ -22,32 +26,31 @@ if (args.length > 2) {
 	console.log('Commands: status, start, stop');
 }
 
-function createCommandFunc(func, callback) {
-	return function command(conf) {
-		func(conf, callback);
+function handleError(message, err) {
+	if (err) {
+		console.log(message, err);
+		return true;
 	}
+	return false;
 }
 
 function onStartComplete(err, pid) {
-	if (err) {
-		console.log('Fail to start daemon: ', err);
+	if (handleError('Fail to start daemon: %s', err)) {
 		return;
 	}
 	console.log('Daemon started with pid: ' + pid);
 }
 
 function onStopComplete(err, alreadyStopped) {
-	if (err) {
-		console.log('Fail to stop: %s', err);
+	if (handleError('Fail to stop: %s', err)) {
 		return;
 	}
 	console.log('Daemon was ' + (alreadyStopped ? 'already stopped' : 'stopped'));
 }
 
 function onStatusGot(err, status) {
-	if (err) {
-		console.log('Fail to get status: %s', err);
+	if (handleError('Fail to get status: %s', err)) {
 		return;
 	}
-	console.log('Daemon %s', (status ? 'running' : 'stopped'));
+	console.log('Daemon %s', (status ? 'is running' : 'was stopped'));
 }
