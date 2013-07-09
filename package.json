@@ -1,0 +1,11 @@
+{
+  "name": "sdt",
+  "version": "0.0.0",
+  "main": "daemon-tools.js",
+  "bin": "./cli.js",
+  "dependencies": {
+    "async": "~0.2.9",
+    "rc": "~0.3.0",
+    "underscore": "~1.5.1"
+  }
+}
