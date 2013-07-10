@@ -1,5 +1,5 @@
 SDT - The Simple Daemon Tools
-===
+=============================
 
 How to install?
 ---------------
