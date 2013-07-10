@@ -1,6 +1,6 @@
 {
   "name": "sdt",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "daemon-tools.js",
   "bin": "./cli.js",
   "repository": {
@@ -8,8 +8,8 @@
     "url": "https://github.com/grudzinski/sdt.git"
   },
   "dependencies": {
-    "async": "~0.2.9",
-    "rc": "~0.3.0",
-    "underscore": "~1.5.1"
+    "async": "*",
+    "rc": "*",
+    "underscore": "*"
   }
 }
