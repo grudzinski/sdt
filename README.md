@@ -13,7 +13,7 @@ Default config
 
 ```json
 {
-  "cwd": "/",
+	"cwd": "/",
 	"command": "true",
 	"args": [],
 	"out": "/dev/null",
@@ -22,8 +22,8 @@ Default config
 }
 ```
 
-How to use from command line?
------------------------------
+How to use it in a command line?
+--------------------------------
 
 ```
 $ sdt start --config /etc/myd/conf.json # starts daemon and prints daemon's pid
@@ -31,7 +31,7 @@ $ sdt status --config /etc/myd/conf.json # prints daemon status
 $ sdt status --config /etc/myd/conf.json # stops daemon
 ```
 
-How to use from code?
+How to use it in a code?
 ---------------------
 
 ```javascript
