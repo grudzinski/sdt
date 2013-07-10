@@ -1,4 +1,4 @@
-SDT
+SDT - The Simple Daemon Tools
 ===
 
 How to install?
@@ -28,9 +28,9 @@ How to use from command line?
 -----------------------------
 
 ```
-$ sdt start --config myd.conf.json # starts daemon and prints daemon's pid
-$ sdt status --config myd.conf.json # prints daemon status
-$ sdt status --config myd.conf.json # stops daemon
+$ sdt start --config /etc/myd/conf.json # starts daemon and prints daemon's pid
+$ sdt status --config /etc/myd/conf.json # prints daemon status
+$ sdt status --config /etc/myd/conf.json # stops daemon
 ```
 
 How to use from code?
@@ -42,7 +42,7 @@ var sdt = require('sdt');
 var conf = {
     cwd: '/',
 	command: 'node',
-	args: ['myd.js'],
+	args: ['/usr/local/lib/node_modules/myd'],
 	out: '/var/log/myd.out.log',
 	err: '/var/log/myd.err.log',
 	pidFile: '/var/run/myd.pid',
