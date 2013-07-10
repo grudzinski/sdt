@@ -10,6 +10,7 @@
   "dependencies": {
     "async": "*",
     "rc": "*",
-    "underscore": "*"
+    "underscore": "*",
+    "forever-monitor": "~1.2.2"
   }
 }

@@ -5,15 +5,17 @@ var async = require('async');
 
 var getStatus = require('./lib/getStatus.js');
 var start = require('./lib/start.js');
+var startMonitored = require('./lib/startMonitored.js');
 var stop = require('./lib/stop.js');
 var conf = require('./lib/conf.js');
 
 var args = process.argv;
 
 var commands = {
-	status: _.partial(getStatus, conf, onStatusGot),
-	start: _.partial(start, conf, onStartComplete),
-	stop: _.partial(stop, conf, onStopComplete)
+	'status': _.partial(getStatus, conf, onStatusGot),
+	'start-monitored': _.partial(startMonitored, conf, onStartMonitoredComplete),
+	'start': _.partial(start, conf, onStartComplete),
+	'stop': _.partial(stop, conf, onStopComplete)
 };
 
 if (args.length > 2) {
@@ -32,6 +34,13 @@ function handleError(message, err) {
 		return true;
 	}
 	return false;
+}
+
+function onStartMonitoredComplete(err, pid) {
+	if (handleError('Fail to start monitored daemon: %s', err)) {
+		return;
+	}
+	console.log('Monitored daemon started with pid: ' + pid);
 }
 
 function onStartComplete(err, pid) {
