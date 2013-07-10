@@ -18,9 +18,7 @@ Default config
 	"args": [],
 	"out": "/dev/null",
 	"err": "/dev/null",
-	"pidFile": "/dev/null",
-    "sid": null,
-    "uid": null
+	"pidFile": "/dev/null"
 }
 ```
 
