@@ -1,7 +1,7 @@
 {
   "name": "sdt",
-  "version": "0.0.9",
-  "main": "daemon-tools.js",
+  "version": "0.0.10",
+  "main": "./index.js",
   "bin": "./cli.js",
   "repository": {
     "type": "git",
