@@ -11,6 +11,6 @@
     "async": "*",
     "rc": "*",
     "underscore": "*",
-    "forever-monitor": "~1.2.2"
+    "forever-monitor": "*"
   }
 }
