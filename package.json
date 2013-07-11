@@ -1,6 +1,6 @@
 {
   "name": "sdt",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "daemon-tools.js",
   "bin": "./cli.js",
   "repository": {
