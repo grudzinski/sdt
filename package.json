@@ -11,7 +11,6 @@
     "async": "*",
     "rc": "*",
     "underscore": "*",
-    "forever-monitor": "*",
-    "log4js": "~0.6.6"
+    "log4js": "*"
   }
 }
