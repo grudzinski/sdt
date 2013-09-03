@@ -43,9 +43,7 @@ var conf = {
 	args: ['/usr/local/lib/node_modules/myd'],
 	out: '/var/log/myd.out.log',
 	err: '/var/log/myd.err.log',
-	pidFile: '/var/run/myd.pid',
-    uid: 'myd',
-    gid: 'myd'
+	pidFile: '/var/run/myd.pid'
 };
 
 sdt.start(conf, function(err, pid) (err, pid) {
