@@ -28,8 +28,9 @@ How to use it in a command line?
 
 ```sh
 $ sdt start --config /etc/myd/conf.json # starts daemon and prints daemon's pid
+$ sdt start-monitored --config /etc/myd/conf.json # starts daemon 
 $ sdt status --config /etc/myd/conf.json # prints daemon status
-$ sdt status --config /etc/myd/conf.json # stops daemon
+$ sdt stop --config /etc/myd/conf.json # stops daemon
 ```
 
 How to use it in a code?
