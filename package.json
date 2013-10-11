@@ -12,7 +12,7 @@
   "dependencies": {
     "async": "*",
     "rc": "*",
-    "underscore": "*",
+    "lodash": "*",
     "log4js": "*"
   }
 }
