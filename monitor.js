@@ -1,5 +1,5 @@
 
-var Monitor = require('./Monitor.js');
+var Monitor = require('./lib/Monitor.js');
 
 process.on('message', start);
 process.on('SIGTERM', killDaemonAndExit);
