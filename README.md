@@ -48,7 +48,7 @@ var conf = {
     gid: 'myd'
 };
 
-sdt.start(conf, function(err, pid) (err, pid) {
+sdt.start(conf, function(err, pid) {
     if (err) {
         console.log('Fail to start daemon: %s', err);
 		return;
