@@ -1,6 +1,7 @@
 {
   "name": "sdt",
   "version": "0.0.16",
+  "version": "0.0.17",
   "main": "./index.js",
   "bin": "./cli.js",
   "readmeFilename": "README.md",
@@ -12,7 +13,7 @@
   "dependencies": {
     "async": "*",
     "rc": "*",
-    "underscore": "*",
+    "lodash": "*",
     "log4js": "*"
   }
 }

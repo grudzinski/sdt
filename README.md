@@ -4,8 +4,8 @@ SDT - The Simple Daemon Tools
 How to install?
 ---------------
 
-```
-# npm install sdt -g
+```sh
+$ npm install sdt -g
 ```
 
 Default config
@@ -18,6 +18,7 @@ Default config
 	"args": [],
 	"out": "/dev/null",
 	"err": "/dev/null",
+	"monitorOut": "monitor.log",
 	"pidFile": "/dev/null"
 }
 ```
@@ -25,10 +26,11 @@ Default config
 How to use it in a command line?
 --------------------------------
 
-```
+```sh
 $ sdt start --config /etc/myd/conf.json # starts daemon and prints daemon's pid
+$ sdt start-monitored --config /etc/myd/conf.json # starts daemon 
 $ sdt status --config /etc/myd/conf.json # prints daemon status
-$ sdt status --config /etc/myd/conf.json # stops daemon
+$ sdt stop --config /etc/myd/conf.json # stops daemon
 ```
 
 How to use it in a code?
@@ -46,7 +48,7 @@ var conf = {
 	pidFile: '/var/run/myd.pid'
 };
 
-sdt.start(conf, function(err, pid) (err, pid) {
+sdt.start(conf, function(err, pid) {
     if (err) {
         console.log('Fail to start daemon: %s', err);
 		return;
