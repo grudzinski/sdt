@@ -1,6 +1,8 @@
 
 var Monitor = require('./lib/Monitor.js');
 
+process.title = 'SDT monitor';
+
 process.on('message', start);
 process.on('SIGTERM', killDaemonAndExit);
 
