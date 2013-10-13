@@ -1,7 +1,6 @@
 {
   "name": "sdt",
-  "version": "0.0.16",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "main": "./index.js",
   "bin": "./cli.js",
   "readmeFilename": "README.md",
