@@ -10,9 +10,9 @@
     "url": "https://github.com/grudzinski/sdt.git"
   },
   "dependencies": {
-    "async": "*",
-    "rc": "*",
-    "lodash": "*",
-    "log4js": "*"
+    "async": "^0.9.0",
+    "lodash": "^2.4.1",
+    "log4js": "^0.6.14",
+    "rc": "^0.4.0"
   }
 }
